@@ -1,0 +1,927 @@
+[
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_AddClientIDToOpenIDConnectProvider.html",
+  "name": "AddClientIDToOpenIDConnectProvider",
+  "synopsis": [
+   "Adds a new client ID (also known as audience) to the list of client IDs already\n      registered for the specified IAM OpenID Connect (OIDC) provider resource.",
+   "This action is idempotent; it does not fail or return an error if you add an existing\n      client ID to the provider."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_AddRoleToInstanceProfile.html",
+  "name": "AddRoleToInstanceProfile",
+  "synopsis": [
+   "Adds the specified IAM role to the specified instance profile.",
+   "For more information about roles, go to Working with Roles. For more information\n      about instance profiles, go to About Instance Profiles."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_AddUserToGroup.html",
+  "name": "AddUserToGroup",
+  "synopsis": [
+   "Adds the specified user to the specified group."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachGroupPolicy.html",
+  "name": "AttachGroupPolicy",
+  "synopsis": [
+   "Attaches the specified managed policy to the specified IAM group.",
+   "You use this API to attach a managed policy to a group. To embed an inline policy in a\n      group, use PutGroupPolicy.",
+   "For more information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachRolePolicy.html",
+  "name": "AttachRolePolicy",
+  "synopsis": [
+   "Attaches the specified managed policy to the specified IAM role.",
+   "When you attach a managed policy to a role, the managed policy becomes part of the\n      role's permission (access) policy. You cannot use a managed policy as the role's trust policy.\n      The role's trust policy is created at the same time as the role, using CreateRole. You can update a role's trust policy using UpdateAssumeRolePolicy.",
+   "Use this API to attach a managed policy to a role. To embed an\n      inline policy in a role, use PutRolePolicy. For more information about\n      policies, see Managed Policies and Inline Policies in the\n      IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_AttachUserPolicy.html",
+  "name": "AttachUserPolicy",
+  "synopsis": [
+   "Attaches the specified managed policy to the specified user.",
+   "You use this API to attach a managed policy to a user. To embed an\n      inline policy in a user, use PutUserPolicy.",
+   "For more information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ChangePassword.html",
+  "name": "ChangePassword",
+  "synopsis": [
+   "Changes the password of the IAM user who is calling this action. The root account\n      password is not affected by this action.",
+   "To change the password for a different user, see UpdateLoginProfile.\n      For more information about modifying passwords, see Managing Passwords in the\n        IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateAccessKey.html",
+  "name": "CreateAccessKey",
+  "synopsis": [
+   " Creates a new AWS secret access key and corresponding AWS access key ID for the\n      specified user. The default status for new keys is Active.",
+   "If you do not specify a user name, IAM determines the user name implicitly based on the\n      AWS access key ID signing the request. Because this action works for access keys under the AWS\n      account, you can use this action to manage root credentials even if the AWS account has no\n      associated users.",
+   " For information about limits on the number of keys you can create, see Limitations on IAM\n        Entities in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateAccountAlias.html",
+  "name": "CreateAccountAlias",
+  "synopsis": [
+   "Creates an alias for your AWS account. For information about using an AWS account\n      alias, see Using an Alias\n        for Your AWS Account ID in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateGroup.html",
+  "name": "CreateGroup",
+  "synopsis": [
+   "Creates a new group.",
+   " For information about the number of groups you can create, see Limitations on IAM\n        Entities in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateInstanceProfile.html",
+  "name": "CreateInstanceProfile",
+  "synopsis": [
+   " Creates a new instance profile. For information about instance profiles, go to About Instance\n        Profiles.",
+   " For information about the number of instance profiles you can create, see Limitations on IAM\n        Entities in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateLoginProfile.html",
+  "name": "CreateLoginProfile",
+  "synopsis": [
+   " Creates a password for the specified user, giving the user the ability to access AWS\n      services through the AWS Management Console. For more information about managing passwords, see Managing\n        Passwords in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html",
+  "name": "CreateOpenIDConnectProvider",
+  "synopsis": [
+   "Creates an IAM entity to describe an identity provider (IdP) that supports OpenID Connect (OIDC).",
+   "The OIDC provider that you create with this operation can be used as a principal in a\n      role's trust policy to establish a trust relationship between AWS and the OIDC\n      provider.",
+   "When you create the IAM OIDC provider, you specify the URL of the OIDC identity\n      provider (IdP) to trust, a list of client IDs (also known as audiences) that identify the\n      application or applications that are allowed to authenticate using the OIDC provider, and a\n      list of thumbprints of the server certificate(s) that the IdP uses. You get all of this\n      information from the OIDC IdP that you want to use for access to AWS."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html",
+  "name": "CreatePolicy",
+  "synopsis": [
+   "Creates a new managed policy for your AWS account.",
+   "This operation creates a policy version with a version identifier of v1\n      and sets v1 as the policy's default version. For more information about policy versions, see\n        Versioning\n        for Managed Policies in the IAM User Guide.",
+   "For more information about managed policies in general, see Managed Policies and Inline\n        Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicyVersion.html",
+  "name": "CreatePolicyVersion",
+  "synopsis": [
+   "Creates a new version of the specified managed policy. To update a managed policy, you\n      create a new policy version. A managed policy can have up to five versions. If the policy has\n      five versions, you must delete an existing version using DeletePolicyVersion\n      before you create a new version.",
+   "Optionally, you can set the new version as the policy's default version. The default\n      version is the version that is in effect for the IAM users, groups, and roles to which the\n      policy is attached.",
+   "For more information about managed policy versions, see Versioning for Managed Policies\n      in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html",
+  "name": "CreateRole",
+  "synopsis": [
+   "Creates a new role for your AWS account. For more information about roles, go to\n        Working with\n        Roles. For information about limitations on role names and the number of roles you\n      can create, go to Limitations on IAM Entities in the\n      IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateSAMLProvider.html",
+  "name": "CreateSAMLProvider",
+  "synopsis": [
+   "Creates an IAM resource that describes an identity provider (IdP) that supports SAML\n      2.0.",
+   "The SAML provider resource that you create with this operation can be used as a\n      principal in an IAM role's trust policy to enable federated users who sign-in using the SAML\n      IdP to assume the role. You can create an IAM role that supports Web-based single sign-on\n      (SSO) to the AWS Management Console or one that supports API access to AWS.",
+   "When you create the SAML provider resource, you upload an a SAML metadata document that\n      you get from your IdP and that includes the issuer's name, expiration information, and keys\n      that can be used to validate the SAML authentication response (assertions) that the IdP sends.\n      You must generate the metadata document using the identity management software that is used as\n      your organization's IdP.",
+   " For more information, see Enabling SAML 2.0 Federated\n        Users to Access the AWS Management Console and About SAML 2.0-based Federation in\n      the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateUser.html",
+  "name": "CreateUser",
+  "synopsis": [
+   "Creates a new IAM user for your AWS account.",
+   " For information about limitations on the number of IAM users you can create, see\n        Limitations on\n        IAM Entities in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateVirtualMFADevice.html",
+  "name": "CreateVirtualMFADevice",
+  "synopsis": [
+   "Creates a new virtual MFA device for the AWS account. After creating the virtual MFA,\n      use EnableMFADevice to attach the MFA device to an IAM user. For more\n      information about creating and working with virtual MFA devices, go to Using a Virtual MFA\n        Device in the IAM User Guide.",
+   "For information about limits on the number of MFA devices you can create, see Limitations on\n        Entities in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeactivateMFADevice.html",
+  "name": "DeactivateMFADevice",
+  "synopsis": [
+   "Deactivates the specified MFA device and removes it from association with the user name\n      for which it was originally enabled.",
+   "For more information about creating and working with virtual MFA devices, go to Using a Virtual MFA\n        Device in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteAccessKey.html",
+  "name": "DeleteAccessKey",
+  "synopsis": [
+   "Deletes the access key pair associated with the specified IAM user.",
+   "If you do not specify a user name, IAM determines the user name implicitly based on\n      the AWS access key ID signing the request. Because this action works for access keys under\n      the AWS account, you can use this action to manage root credentials even if the AWS\n      account has no associated users."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteAccountAlias.html",
+  "name": "DeleteAccountAlias",
+  "synopsis": [
+   " Deletes the specified AWS account alias. For information about using an AWS\n      account alias, see Using an\n        Alias for Your AWS Account ID in the\n      IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteAccountPasswordPolicy.html",
+  "name": "DeleteAccountPasswordPolicy",
+  "synopsis": [
+   "Deletes the password policy for the AWS account. There are no parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteGroup.html",
+  "name": "DeleteGroup",
+  "synopsis": [
+   "Deletes the specified IAM group. The group must not contain any users or have any\n      attached policies."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteGroupPolicy.html",
+  "name": "DeleteGroupPolicy",
+  "synopsis": [
+   "Deletes the specified inline policy that is embedded in the specified IAM\n      group.",
+   "A group can also have managed policies attached to it. To detach a managed policy from\n      a group, use DetachGroupPolicy. For more information about policies, refer\n      to Managed\n        Policies and Inline Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteInstanceProfile.html",
+  "name": "DeleteInstanceProfile",
+  "synopsis": [
+   "Deletes the specified instance profile. The instance profile must not have an\n      associated role.",
+   "For more information about instance profiles, go to About Instance Profiles."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteLoginProfile.html",
+  "name": "DeleteLoginProfile",
+  "synopsis": [
+   "Deletes the password for the specified IAM user, which terminates the user's ability\n      to access AWS services through the AWS Management Console."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteOpenIDConnectProvider.html",
+  "name": "DeleteOpenIDConnectProvider",
+  "synopsis": [
+   "Deletes an OpenID Connect identity provider (IdP) resource object in IAM.",
+   "Deleting an IAM OIDC provider resource does not update any roles that reference the\n      provider as a principal in their trust policies. Any attempt to assume a role that references\n      a deleted provider fails.",
+   "This action is idempotent; it does not fail or return an error if you call the action\n      for a provider that does not exist."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeletePolicy.html",
+  "name": "DeletePolicy",
+  "synopsis": [
+   "Deletes the specified managed policy.",
+   "Before you can delete a managed policy, you must first detach the policy from all\n      users, groups, and roles that it is attached to, and you must delete all of the policy's\n      versions. The following steps describe the process for deleting a managed policy:",
+   "For information about managed policies, see Managed Policies and Inline\n        Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeletePolicyVersion.html",
+  "name": "DeletePolicyVersion",
+  "synopsis": [
+   "Deletes the specified version from the specified managed policy.",
+   "You cannot delete the default version from a policy using this API. To delete the\n      default version from a policy, use DeletePolicy. To find out which version\n      of a policy is marked as the default version, use ListPolicyVersions.",
+   "For information about versions for managed policies, see Versioning for Managed Policies\n      in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteRole.html",
+  "name": "DeleteRole",
+  "synopsis": [
+   "Deletes the specified role. The role must not have any policies attached. For more\n      information about roles, go to Working with Roles."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteRolePolicy.html",
+  "name": "DeleteRolePolicy",
+  "synopsis": [
+   "Deletes the specified inline policy that is embedded in the specified IAM\n      role.",
+   "A role can also have managed policies attached to it. To detach a managed policy from a\n      role, use DetachRolePolicy. For more information about policies, refer to\n        Managed\n        Policies and Inline Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteSAMLProvider.html",
+  "name": "DeleteSAMLProvider",
+  "synopsis": [
+   "Deletes a SAML provider resource in IAM.",
+   "Deleting the provider resource from IAM does not update any roles that reference the\n      SAML provider resource's ARN as a principal in their trust policies. Any attempt to assume a\n      role that references a non-existent provider resource ARN fails."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteServerCertificate.html",
+  "name": "DeleteServerCertificate",
+  "synopsis": [
+   "Deletes the specified server certificate.",
+   "For more information about working with server certificates, including a list of AWS\n      services that can use the server certificates that you manage with IAM, go to Working with\n        Server Certificates in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteSigningCertificate.html",
+  "name": "DeleteSigningCertificate",
+  "synopsis": [
+   "Deletes a signing certificate associated with the specified IAM user.",
+   "If you do not specify a user name, IAM determines the user name implicitly based on\n      the AWS access key ID signing the request. Because this action works for access keys under\n      the AWS account, you can use this action to manage root credentials even if the AWS\n      account has no associated IAM users."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteSSHPublicKey.html",
+  "name": "DeleteSSHPublicKey",
+  "synopsis": [
+   "Deletes the specified SSH public key.",
+   "The SSH public key deleted by this action is used only for authenticating the\n      associated IAM user to an AWS CodeCommit repository. For more information about using SSH keys to\n      authenticate to an AWS CodeCommit repository, see Set up AWS CodeCommit for SSH\n        Connections in the AWS CodeCommit User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteUser.html",
+  "name": "DeleteUser",
+  "synopsis": [
+   "Deletes the specified IAM user. The user must not belong to any groups or have any\n      access keys, signing certificates, or attached policies."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteUserPolicy.html",
+  "name": "DeleteUserPolicy",
+  "synopsis": [
+   "Deletes the specified inline policy that is embedded in the specified IAM\n      user.",
+   "A user can also have managed policies attached to it. To detach a managed policy from a\n      user, use DetachUserPolicy. For more information about policies, refer to\n        Managed\n        Policies and Inline Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DeleteVirtualMFADevice.html",
+  "name": "DeleteVirtualMFADevice",
+  "synopsis": [
+   "Deletes a virtual MFA device."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DetachGroupPolicy.html",
+  "name": "DetachGroupPolicy",
+  "synopsis": [
+   "Removes the specified managed policy from the specified IAM group.",
+   "A group can also have inline policies embedded with it. To delete an inline policy, use\n      the DeleteGroupPolicy API. For information about policies, see Managed Policies\n        and Inline Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DetachRolePolicy.html",
+  "name": "DetachRolePolicy",
+  "synopsis": [
+   "Removes the specified managed policy from the specified role.",
+   "A role can also have inline policies embedded with it. To delete an inline policy, use\n      the DeleteRolePolicy API. For information about policies, see Managed Policies\n        and Inline Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_DetachUserPolicy.html",
+  "name": "DetachUserPolicy",
+  "synopsis": [
+   "Removes the specified managed policy from the specified user.",
+   "A user can also have inline policies embedded with it. To delete an inline policy, use\n      the DeleteUserPolicy API. For information about policies, see Managed Policies\n        and Inline Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_EnableMFADevice.html",
+  "name": "EnableMFADevice",
+  "synopsis": [
+   "Enables the specified MFA device and associates it with the specified IAM user. When\n      enabled, the MFA device is required for every subsequent login by the IAM user associated\n      with the device."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GenerateCredentialReport.html",
+  "name": "GenerateCredentialReport",
+  "synopsis": [
+   " Generates a credential report for the AWS account. For more information about the\n      credential report, see Getting Credential Reports in the\n        IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetAccessKeyLastUsed.html",
+  "name": "GetAccessKeyLastUsed",
+  "synopsis": [
+   "Retrieves information about when the specified access key was last used. The\n      information includes the date and time of last use, along with the AWS service and region\n      that were specified in the last request made with that key."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetAccountAuthorizationDetails.html",
+  "name": "GetAccountAuthorizationDetails",
+  "synopsis": [
+   "Retrieves information about all IAM users, groups, roles, and policies in your AWS\n      account, including their relationships to one another. Use this API to obtain a snapshot of\n      the configuration of IAM permissions (users, groups, roles, and policies) in your\n      account.",
+   "You can optionally filter the results using the Filter parameter. You can\n      paginate the results using the MaxItems and Marker\n      parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetAccountPasswordPolicy.html",
+  "name": "GetAccountPasswordPolicy",
+  "synopsis": [
+   "Retrieves the password policy for the AWS account. For more information about using a\n      password policy, go to Managing an IAM Password\n        Policy."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetAccountSummary.html",
+  "name": "GetAccountSummary",
+  "synopsis": [
+   "Retrieves information about IAM entity usage and IAM quotas in the AWS\n      account.",
+   " For information about limitations on IAM entities, see Limitations on IAM Entities in the\n        IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetContextKeysForCustomPolicy.html",
+  "name": "GetContextKeysForCustomPolicy",
+  "synopsis": [
+   "Gets a list of all of the context keys referenced in the input policies. The policies\n      are supplied as a list of one or more strings. To get the context keys from policies\n      associated with an IAM user, group, or role, use GetContextKeysForPrincipalPolicy.",
+   "Context keys are variables maintained by AWS and its services that provide details\n      about the context of an API query request, and can be evaluated by testing against a value\n      specified in an IAM policy. Use GetContextKeysForCustomPolicy to understand what key names\n      and values you must supply when you call SimulateCustomPolicy. Note that all\n      parameters are shown in unencoded form here for clarity, but must be URL encoded to be\n      included as a part of a real HTML request."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetContextKeysForPrincipalPolicy.html",
+  "name": "GetContextKeysForPrincipalPolicy",
+  "synopsis": [
+   "Gets a list of all of the context keys referenced in all of the IAM policies attached\n      to the specified IAM entity. The entity can be an IAM user, group, or role. If you specify\n      a user, then the request also includes all of the policies attached to groups that the user is\n      a member of.",
+   "You can optionally include a list of one or more additional policies, specified as\n      strings. If you want to include only a list of policies by string, use\n        GetContextKeysForCustomPolicy instead.",
+   "\n               Note: This API discloses information about the permissions\n      granted to other users. If you do not want users to see other user's permissions, then\n      consider allowing them to use GetContextKeysForCustomPolicy\n      instead.",
+   "Context keys are variables maintained by AWS and its services that provide details\n      about the context of an API query request, and can be evaluated by testing against a value in\n      an IAM policy. Use GetContextKeysForPrincipalPolicy to understand what key\n      names and values you must supply when you call SimulatePrincipalPolicy."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetCredentialReport.html",
+  "name": "GetCredentialReport",
+  "synopsis": [
+   " Retrieves a credential report for the AWS account. For more information about the\n      credential report, see Getting Credential Reports in the\n        IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetGroup.html",
+  "name": "GetGroup",
+  "synopsis": [
+   " Returns a list of IAM users that are in the specified IAM group. You can paginate\n      the results using the MaxItems and Marker parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetGroupPolicy.html",
+  "name": "GetGroupPolicy",
+  "synopsis": [
+   "Retrieves the specified inline policy document that is embedded in the specified IAM\n      group.",
+   "An IAM group can also have managed policies attached to it. To retrieve a managed\n      policy document that is attached to a group, use GetPolicy to determine the\n      policy's default version, then use GetPolicyVersion to retrieve the policy\n      document.",
+   "For more information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetInstanceProfile.html",
+  "name": "GetInstanceProfile",
+  "synopsis": [
+   " Retrieves information about the specified instance profile, including the instance\n      profile's path, GUID, ARN, and role. For more information about instance profiles, see About Instance\n        Profiles in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetLoginProfile.html",
+  "name": "GetLoginProfile",
+  "synopsis": [
+   "Retrieves the user name and password-creation date for the specified IAM user. If the\n      user has not been assigned a password, the action returns a 404 (NoSuchEntity)\n      error."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetOpenIDConnectProvider.html",
+  "name": "GetOpenIDConnectProvider",
+  "synopsis": [
+   "Returns information about the specified OpenID Connect (OIDC) provider resource object\n      in IAM."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetPolicy.html",
+  "name": "GetPolicy",
+  "synopsis": [
+   "Retrieves information about the specified managed policy, including the policy's\n      default version and the total number of IAM users, groups, and roles to which the policy is\n      attached. To retrieve the list of the specific users, groups, and roles that the policy is\n      attached to, use the ListEntitiesForPolicy API. This API returns metadata\n      about the policy. To retrieve the actual policy document for a specific version of the policy,\n      use GetPolicyVersion.",
+   "This API retrieves information about managed policies. To retrieve information about an\n      inline policy that is embedded with an IAM user, group, or role, use the GetUserPolicy, GetGroupPolicy, or GetRolePolicy API.",
+   "For more information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetPolicyVersion.html",
+  "name": "GetPolicyVersion",
+  "synopsis": [
+   "Retrieves information about the specified version of the specified managed policy,\n      including the policy document.",
+   "To list the available versions for a policy, use ListPolicyVersions.",
+   "This API retrieves information about managed policies. To retrieve information about an\n      inline policy that is embedded in a user, group, or role, use the GetUserPolicy, GetGroupPolicy, or GetRolePolicy API.",
+   "For more information about the types of policies, see Managed Policies and Inline\n        Policies in the IAM User Guide.",
+   "For more information about managed policy versions, see Versioning for Managed Policies\n      in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetRole.html",
+  "name": "GetRole",
+  "synopsis": [
+   "Retrieves information about the specified role, including the role's path, GUID, ARN,\n      and the role's trust policy that grants permission to assume the role. For more information\n      about roles, see Working with Roles."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetRolePolicy.html",
+  "name": "GetRolePolicy",
+  "synopsis": [
+   "Retrieves the specified inline policy document that is embedded with the specified\n      IAM role.",
+   "An IAM role can also have managed policies attached to it. To retrieve a managed\n      policy document that is attached to a role, use GetPolicy to determine the\n      policy's default version, then use GetPolicyVersion to retrieve the policy\n      document.",
+   "For more information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide.",
+   "For more information about roles, see Using Roles to Delegate Permissions and Federate\n        Identities."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetSAMLProvider.html",
+  "name": "GetSAMLProvider",
+  "synopsis": [
+   "Returns the SAML provider metadocument that was uploaded when the IAM SAML provider\n      resource object was created or updated."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetServerCertificate.html",
+  "name": "GetServerCertificate",
+  "synopsis": [
+   "Retrieves information about the specified server certificate stored in IAM.",
+   "For more information about working with server certificates, including a list of AWS\n      services that can use the server certificates that you manage with IAM, go to Working with\n        Server Certificates in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetSSHPublicKey.html",
+  "name": "GetSSHPublicKey",
+  "synopsis": [
+   "Retrieves the specified SSH public key, including metadata about the key.",
+   "The SSH public key retrieved by this action is used only for authenticating the\n      associated IAM user to an AWS CodeCommit repository. For more information about using SSH keys to\n      authenticate to an AWS CodeCommit repository, see Set up AWS CodeCommit for SSH\n        Connections in the AWS CodeCommit User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetUser.html",
+  "name": "GetUser",
+  "synopsis": [
+   "Retrieves information about the specified IAM user, including the user's creation\n      date, path, unique ID, and ARN.",
+   "If you do not specify a user name, IAM determines the user name implicitly based on\n      the AWS access key ID used to sign the request to this API."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_GetUserPolicy.html",
+  "name": "GetUserPolicy",
+  "synopsis": [
+   "Retrieves the specified inline policy document that is embedded in the specified IAM\n      user.",
+   "An IAM user can also have managed policies attached to it. To retrieve a managed\n      policy document that is attached to a user, use GetPolicy to determine the\n      policy's default version, then use GetPolicyVersion to retrieve the policy\n      document.",
+   "For more information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListAccessKeys.html",
+  "name": "ListAccessKeys",
+  "synopsis": [
+   "Returns information about the access key IDs associated with the specified IAM user.\n      If there are none, the action returns an empty list.",
+   "Although each user is limited to a small number of keys, you can still paginate the\n      results using the MaxItems and Marker parameters.",
+   "If the UserName field is not specified, the UserName is determined\n      implicitly based on the AWS access key ID used to sign the request. Because this action works\n      for access keys under the AWS account, you can use this action to manage root credentials even\n      if the AWS account has no associated users."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListAccountAliases.html",
+  "name": "ListAccountAliases",
+  "synopsis": [
+   "Lists the account alias associated with the AWS account (Note: you can have only\n      one). For information about using an AWS account alias, see Using an Alias for Your AWS Account ID in\n      the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListAttachedGroupPolicies.html",
+  "name": "ListAttachedGroupPolicies",
+  "synopsis": [
+   "Lists all managed policies that are attached to the specified IAM group.",
+   "An IAM group can also have inline policies embedded with it. To list the inline\n      policies for a group, use the ListGroupPolicies API. For information about\n      policies, see Managed Policies and Inline Policies in the\n      IAM User Guide.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters. You can use the PathPrefix parameter to limit the list of policies to\n      only those matching the specified path prefix. If there are no policies attached to the\n      specified group (or none that match the specified path prefix), the action returns an empty\n      list."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListAttachedRolePolicies.html",
+  "name": "ListAttachedRolePolicies",
+  "synopsis": [
+   "Lists all managed policies that are attached to the specified IAM role.",
+   "An IAM role can also have inline policies embedded with it. To list the inline\n      policies for a role, use the ListRolePolicies API. For information about\n      policies, see Managed Policies and Inline Policies in the\n      IAM User Guide.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters. You can use the PathPrefix parameter to limit the list of policies to\n      only those matching the specified path prefix. If there are no policies attached to the\n      specified role (or none that match the specified path prefix), the action returns an empty\n      list."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListAttachedUserPolicies.html",
+  "name": "ListAttachedUserPolicies",
+  "synopsis": [
+   "Lists all managed policies that are attached to the specified IAM user.",
+   "An IAM user can also have inline policies embedded with it. To list the inline\n      policies for a user, use the ListUserPolicies API. For information about\n      policies, see Managed Policies and Inline Policies in the\n      IAM User Guide.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters. You can use the PathPrefix parameter to limit the list of policies to\n      only those matching the specified path prefix. If there are no policies attached to the\n      specified group (or none that match the specified path prefix), the action returns an empty\n      list."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListEntitiesForPolicy.html",
+  "name": "ListEntitiesForPolicy",
+  "synopsis": [
+   "Lists all IAM users, groups, and roles that the specified managed policy is attached\n      to.",
+   "You can use the optional EntityFilter parameter to limit the results to a\n      particular type of entity (users, groups, or roles). For example, to list only the roles that\n      are attached to the specified policy, set EntityFilter to\n      Role.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListGroupPolicies.html",
+  "name": "ListGroupPolicies",
+  "synopsis": [
+   "Lists the names of the inline policies that are embedded in the specified IAM\n      group.",
+   "An IAM group can also have managed policies attached to it. To list the managed\n      policies that are attached to a group, use ListAttachedGroupPolicies. For\n      more information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters. If there are no inline policies embedded with the specified group, the action\n      returns an empty list."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListGroups.html",
+  "name": "ListGroups",
+  "synopsis": [
+   "Lists the IAM groups that have the specified path prefix.",
+   " You can paginate the results using the MaxItems and Marker\n      parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListGroupsForUser.html",
+  "name": "ListGroupsForUser",
+  "synopsis": [
+   "Lists the IAM groups that the specified IAM user belongs to.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListInstanceProfiles.html",
+  "name": "ListInstanceProfiles",
+  "synopsis": [
+   "Lists the instance profiles that have the specified path prefix. If there are none, the\n      action returns an empty list. For more information about instance profiles, go to About Instance\n        Profiles.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListInstanceProfilesForRole.html",
+  "name": "ListInstanceProfilesForRole",
+  "synopsis": [
+   "Lists the instance profiles that have the specified associated IAM role. If there are\n      none, the action returns an empty list. For more information about instance profiles, go to\n        About Instance\n        Profiles.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListMFADevices.html",
+  "name": "ListMFADevices",
+  "synopsis": [
+   "Lists the MFA devices for an IAM user. If the request includes a IAM user name,\n      then this action lists all the MFA devices associated with the specified user. If you do not\n      specify a user name, IAM determines the user name implicitly based on the AWS access key ID\n      signing the request for this API.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListOpenIDConnectProviders.html",
+  "name": "ListOpenIDConnectProviders",
+  "synopsis": [
+   "Lists information about the IAM OpenID Connect (OIDC) provider resource objects\n      defined in the AWS account."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListPolicies.html",
+  "name": "ListPolicies",
+  "synopsis": [
+   "Lists all the managed policies that are available in your AWS account, including your\n      own customer-defined managed policies and all AWS managed policies.",
+   "You can filter the list of policies that is returned using the optional\n        OnlyAttached, Scope, and PathPrefix parameters. For\n      example, to list only the customer managed policies in your AWS account, set\n        Scope to Local. To list only AWS managed policies, set\n        Scope to AWS.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters.",
+   "For more information about managed policies, see Managed Policies and Inline\n        Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListPolicyVersions.html",
+  "name": "ListPolicyVersions",
+  "synopsis": [
+   "Lists information about the versions of the specified managed policy, including the\n      version that is currently set as the policy's default version.",
+   "For more information about managed policies, see Managed Policies and Inline\n        Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListRolePolicies.html",
+  "name": "ListRolePolicies",
+  "synopsis": [
+   "Lists the names of the inline policies that are embedded in the specified IAM\n      role.",
+   "An IAM role can also have managed policies attached to it. To list the managed\n      policies that are attached to a role, use ListAttachedRolePolicies. For more\n      information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters. If there are no inline policies embedded with the specified role, the action\n      returns an empty list."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListRoles.html",
+  "name": "ListRoles",
+  "synopsis": [
+   "Lists the IAM roles that have the specified path prefix. If there are none, the\n      action returns an empty list. For more information about roles, go to Working with\n      Roles.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListSAMLProviders.html",
+  "name": "ListSAMLProviders",
+  "synopsis": [
+   "Lists the SAML provider resource objects defined in IAM in the account."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListServerCertificates.html",
+  "name": "ListServerCertificates",
+  "synopsis": [
+   "Lists the server certificates stored in IAM that have the specified path prefix. If\n      none exist, the action returns an empty list.",
+   " You can paginate the results using the MaxItems and Marker\n      parameters.",
+   "For more information about working with server certificates, including a list of AWS\n      services that can use the server certificates that you manage with IAM, go to Working with\n        Server Certificates in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListSigningCertificates.html",
+  "name": "ListSigningCertificates",
+  "synopsis": [
+   "Returns information about the signing certificates associated with the specified IAM\n      user. If there are none, the action returns an empty list.",
+   "Although each user is limited to a small number of signing certificates, you can still\n      paginate the results using the MaxItems and Marker\n      parameters.",
+   "If the UserName field is not specified, the user name is determined\n      implicitly based on the AWS access key ID used to sign the request for this API. Because\n      this action works for access keys under the AWS account, you can use this action to manage\n      root credentials even if the AWS account has no associated users."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListSSHPublicKeys.html",
+  "name": "ListSSHPublicKeys",
+  "synopsis": [
+   "Returns information about the SSH public keys associated with the specified IAM user.\n      If there are none, the action returns an empty list.",
+   "The SSH public keys returned by this action are used only for authenticating the IAM\n      user to an AWS CodeCommit repository. For more information about using SSH keys to authenticate to an\n      AWS CodeCommit repository, see Set up AWS CodeCommit for SSH\n        Connections in the AWS CodeCommit User Guide.",
+   "Although each user is limited to a small number of keys, you can still paginate the\n      results using the MaxItems and Marker parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListUserPolicies.html",
+  "name": "ListUserPolicies",
+  "synopsis": [
+   "Lists the names of the inline policies embedded in the specified IAM user.",
+   "An IAM user can also have managed policies attached to it. To list the managed\n      policies that are attached to a user, use ListAttachedUserPolicies. For more\n      information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters. If there are no inline policies embedded with the specified user, the action\n      returns an empty list."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListUsers.html",
+  "name": "ListUsers",
+  "synopsis": [
+   "Lists the IAM users that have the specified path prefix. If no path prefix is\n      specified, the action returns all users in the AWS account. If there are none, the action\n      returns an empty list.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ListVirtualMFADevices.html",
+  "name": "ListVirtualMFADevices",
+  "synopsis": [
+   "Lists the virtual MFA devices defined in the AWS account by assignment status. If you\n      do not specify an assignment status, the action returns a list of all virtual MFA devices.\n      Assignment status can be Assigned, Unassigned, or\n      Any.",
+   "You can paginate the results using the MaxItems and Marker\n      parameters."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_PutGroupPolicy.html",
+  "name": "PutGroupPolicy",
+  "synopsis": [
+   "Adds or updates an inline policy document that is embedded in the specified IAM\n      group.",
+   "A user can also have managed policies attached to it. To attach a managed policy to a\n      group, use AttachGroupPolicy. To create a new managed policy, use CreatePolicy. For information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide.",
+   "For information about limits on the number of inline policies that you can embed in a\n      group, see Limitations on IAM Entities in the\n      IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_PutRolePolicy.html",
+  "name": "PutRolePolicy",
+  "synopsis": [
+   "Adds or updates an inline policy document that is embedded in the specified IAM\n      role.",
+   "When you embed an inline policy in a role, the inline policy is used as part of the\n      role's access (permissions) policy. The role's trust policy is created at the same time as the\n      role, using CreateRole. You can update a role's trust policy using UpdateAssumeRolePolicy. For more information about IAM roles, go to Using Roles to Delegate\n        Permissions and Federate Identities.",
+   "A role can also have a managed policy attached to it. To attach a managed policy to a\n      role, use AttachRolePolicy. To create a new managed policy, use CreatePolicy. For information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide.",
+   "For information about limits on the number of inline policies that you can embed with a\n      role, see Limitations on IAM Entities in the\n      IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_PutUserPolicy.html",
+  "name": "PutUserPolicy",
+  "synopsis": [
+   "Adds or updates an inline policy document that is embedded in the specified IAM\n      user.",
+   "An IAM user can also have a managed policy attached to it. To attach a managed policy\n      to a user, use AttachUserPolicy. To create a new managed policy, use CreatePolicy. For information about policies, see Managed Policies and Inline\n        Policies in the IAM User Guide.",
+   "For information about limits on the number of inline policies that you can embed in a\n      user, see Limitations on IAM Entities in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_RemoveClientIDFromOpenIDConnectProvider.html",
+  "name": "RemoveClientIDFromOpenIDConnectProvider",
+  "synopsis": [
+   "Removes the specified client ID (also known as audience) from the list of client IDs\n      registered for the specified IAM OpenID Connect (OIDC) provider resource object.",
+   "This action is idempotent; it does not fail or return an error if you try to remove a\n      client ID that does not exist."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_RemoveRoleFromInstanceProfile.html",
+  "name": "RemoveRoleFromInstanceProfile",
+  "synopsis": [
+   "Removes the specified IAM role from the specified EC2 instance profile.",
+   " For more information about IAM roles, go to Working with Roles. For more information\n      about instance profiles, go to About Instance Profiles."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_RemoveUserFromGroup.html",
+  "name": "RemoveUserFromGroup",
+  "synopsis": [
+   "Removes the specified user from the specified group."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_ResyncMFADevice.html",
+  "name": "ResyncMFADevice",
+  "synopsis": [
+   "Synchronizes the specified MFA device with its IAM resource object on the AWS\n      servers.",
+   "For more information about creating and working with virtual MFA devices, go to Using a Virtual MFA\n        Device in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_SetDefaultPolicyVersion.html",
+  "name": "SetDefaultPolicyVersion",
+  "synopsis": [
+   "Sets the specified version of the specified policy as the policy's default (operative)\n      version.",
+   "This action affects all users, groups, and roles that the policy is attached to. To\n      list the users, groups, and roles that the policy is attached to, use the ListEntitiesForPolicy API.",
+   "For information about managed policies, see Managed Policies and Inline\n        Policies in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_SimulateCustomPolicy.html",
+  "name": "SimulateCustomPolicy",
+  "synopsis": [
+   "Simulate how a set of IAM policies and optionally a resource-based policy works with\n      a list of API actions and AWS resources to determine the policies' effective permissions.\n      The policies are provided as strings.",
+   "The simulation does not perform the API actions; it only checks the authorization to\n      determine if the simulated policies allow or deny the actions.",
+   "If you want to simulate existing policies attached to an IAM user, group, or role,\n      use SimulatePrincipalPolicy instead.",
+   "Context keys are variables maintained by AWS and its services that provide details\n      about the context of an API query request. You can use the Condition element of\n      an IAM policy to evaluate context keys. To get the list of context keys that the policies\n      require for correct simulation, use GetContextKeysForCustomPolicy.",
+   "If the output is long, you can use MaxItems and Marker\n      parameters to paginate the results."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_SimulatePrincipalPolicy.html",
+  "name": "SimulatePrincipalPolicy",
+  "synopsis": [
+   "Simulate how a set of IAM policies attached to an IAM entity works with a list of\n      API actions and AWS resources to determine the policies' effective permissions. The entity\n      can be an IAM user, group, or role. If you specify a user, then the simulation also includes\n      all of the policies that are attached to groups that the user belongs to .",
+   "You can optionally include a list of one or more additional policies specified as\n      strings to include in the simulation. If you want to simulate only policies specified as\n      strings, use SimulateCustomPolicy instead.",
+   "You can also optionally include one resource-based policy to be evaluated with each of\n      the resources included in the simulation.",
+   "The simulation does not perform the API actions, it only checks the authorization to\n      determine if the simulated policies allow or deny the actions.",
+   "\n               Note: This API discloses information about the permissions\n      granted to other users. If you do not want users to see other user's permissions, then\n      consider allowing them to use SimulateCustomPolicy instead.",
+   "Context keys are variables maintained by AWS and its services that provide details\n      about the context of an API query request. You can use the Condition element of\n      an IAM policy to evaluate context keys. To get the list of context keys that the policies\n      require for correct simulation, use GetContextKeysForPrincipalPolicy.",
+   "If the output is long, you can use the MaxItems and Marker\n      parameters to paginate the results."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateAccessKey.html",
+  "name": "UpdateAccessKey",
+  "synopsis": [
+   "Changes the status of the specified access key from Active to Inactive, or vice versa.\n      This action can be used to disable a user's key as part of a key rotation work flow.",
+   "If the UserName field is not specified, the UserName is determined\n      implicitly based on the AWS access key ID used to sign the request. Because this action\n      works for access keys under the AWS account, you can use this action to manage root\n      credentials even if the AWS account has no associated users.",
+   "For information about rotating keys, see Managing Keys and Certificates in the\n        IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateAccountPasswordPolicy.html",
+  "name": "UpdateAccountPasswordPolicy",
+  "synopsis": [
+   "Updates the password policy settings for the AWS account.",
+   " For more information about using a password policy, see Managing an IAM Password\n        Policy in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateAssumeRolePolicy.html",
+  "name": "UpdateAssumeRolePolicy",
+  "synopsis": [
+   "Updates the policy that grants an IAM entity permission to assume a role. This is\n      typically referred to as the \"role trust policy\". For more information about roles, go to\n        Using Roles to Delegate\n        Permissions and Federate Identities."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateGroup.html",
+  "name": "UpdateGroup",
+  "synopsis": [
+   "Updates the name and/or the path of the specified IAM group."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateLoginProfile.html",
+  "name": "UpdateLoginProfile",
+  "synopsis": [
+   "Changes the password for the specified IAM user.",
+   "IAM users can change their own passwords by calling ChangePassword.\n      For more information about modifying passwords, see Managing Passwords in the\n        IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateOpenIDConnectProviderThumbprint.html",
+  "name": "UpdateOpenIDConnectProviderThumbprint",
+  "synopsis": [
+   "Replaces the existing list of server certificate thumbprints associated with an OpenID\n      Connect (OIDC) provider resource object with a new list of thumbprints.",
+   "The list that you pass with this action completely replaces the existing list of\n      thumbprints. (The lists are not merged.)",
+   "Typically, you need to update a thumbprint only when the identity provider's\n      certificate changes, which occurs rarely. However, if the provider's certificate\n        does change, any attempt to assume an IAM role that specifies the\n      OIDC provider as a principal fails until the certificate thumbprint is updated."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateSAMLProvider.html",
+  "name": "UpdateSAMLProvider",
+  "synopsis": [
+   "Updates the metadata document for an existing SAML provider resource object."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateServerCertificate.html",
+  "name": "UpdateServerCertificate",
+  "synopsis": [
+   "Updates the name and/or the path of the specified server certificate stored in\n      IAM.",
+   "For more information about working with server certificates, including a list of AWS\n      services that can use the server certificates that you manage with IAM, go to Working with\n        Server Certificates in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateSigningCertificate.html",
+  "name": "UpdateSigningCertificate",
+  "synopsis": [
+   "Changes the status of the specified user signing certificate from active to disabled,\n      or vice versa. This action can be used to disable an IAM user's signing certificate as part\n      of a certificate rotation work flow.",
+   "If the UserName field is not specified, the UserName is determined\n      implicitly based on the AWS access key ID used to sign the request. Because this action\n      works for access keys under the AWS account, you can use this action to manage root\n      credentials even if the AWS account has no associated users."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateSSHPublicKey.html",
+  "name": "UpdateSSHPublicKey",
+  "synopsis": [
+   "Sets the status of an IAM user's SSH public key to active or inactive. SSH public\n      keys that are inactive cannot be used for authentication. This action can be used to disable a\n      user's SSH public key as part of a key rotation work flow.",
+   "The SSH public key affected by this action is used only for authenticating the\n      associated IAM user to an AWS CodeCommit repository. For more information about using SSH keys to\n      authenticate to an AWS CodeCommit repository, see Set up AWS CodeCommit for SSH\n        Connections in the AWS CodeCommit User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UpdateUser.html",
+  "name": "UpdateUser",
+  "synopsis": [
+   "Updates the name and/or the path of the specified IAM user."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UploadServerCertificate.html",
+  "name": "UploadServerCertificate",
+  "synopsis": [
+   "Uploads a server certificate entity for the AWS account. The server certificate\n      entity includes a public key certificate, a private key, and an optional certificate chain,\n      which should all be PEM-encoded.",
+   "For more information about working with server certificates, including a list of AWS\n      services that can use the server certificates that you manage with IAM, go to Working with\n        Server Certificates in the IAM User Guide.",
+   "For information about the number of server certificates you can upload, see Limitations on IAM\n        Entities and Objects in the IAM User Guide."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UploadSigningCertificate.html",
+  "name": "UploadSigningCertificate",
+  "synopsis": [
+   "Uploads an X.509 signing certificate and associates it with the specified IAM user.\n      Some AWS services use X.509 signing certificates to validate requests that are signed with a\n      corresponding private key. When you upload the certificate, its default status is\n        Active.",
+   "If the UserName field is not specified, the IAM user name is determined\n      implicitly based on the AWS access key ID used to sign the request. Because this action\n      works for access keys under the AWS account, you can use this action to manage root\n      credentials even if the AWS account has no associated users."
+  ]
+ },
+ {
+  "link": "http://docs.aws.amazon.com/IAM/latest/APIReference/API_UploadSSHPublicKey.html",
+  "name": "UploadSSHPublicKey",
+  "synopsis": [
+   "Uploads an SSH public key and associates it with the specified IAM user.",
+   "The SSH public key uploaded by this action can be used only for authenticating the\n      associated IAM user to an AWS CodeCommit repository. For more information about using SSH keys to\n      authenticate to an AWS CodeCommit repository, see Set up AWS CodeCommit for SSH\n        Connections in the AWS CodeCommit User Guide."
+  ]
+ }
+]
